@@ -69,7 +69,7 @@ const FooterAboveCard = styled.div`
     @media screen and (max-width: 989px) {
       font-size: 1.2rem;
       text-align: center;
-      padding: 10px 50px;
+      padding: 10px 90px;
       margin: 0 7rem;
     }
     a {
@@ -134,10 +134,25 @@ const FooterLinks = styled.div`
   }
 
   @media (max-width: 720px) {
-    font-size: 23px;
+    font-size: 1.5rem;
   }
 `;
 
+const FooterWords = styled.div`
+  text-align: center;
+  h2 {
+    font-size: 2.2rem;
+    @media screen and (max-width: 989px) {
+      font-size: 1.2rem;
+    }
+  }
+  h3 {
+    font-size: 1.6rem;
+    @media screen and (max-width: 989px) {
+      font-size: 1rem;
+    }
+  }
+`;
 const Footer = (props) => (
   <FooterWrapper>
     <FooterAboveCard>
@@ -150,12 +165,16 @@ const Footer = (props) => (
     <FooterSection>
       <FooterImage src={props.image}></FooterImage>
       <FooterLinks>
-        <a href="">Facebook</a>
         <a href="">Instagram</a>
         <a href="">Linked-in</a>
         <a href="">Github</a>
         <a href="">Mail</a>
       </FooterLinks>
+      <FooterWords>
+        <h2>COPYRIGHT@2020</h2>
+        <h2>Handcrafted by Me with ❤ </h2>
+        <h3> Made using React .</h3>
+      </FooterWords>
     </FooterSection>
   </FooterWrapper>
 );
