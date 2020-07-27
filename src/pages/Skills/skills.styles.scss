@@ -1,0 +1,66 @@
+$rod2: #ff004d;
+
+.skills-wrapper {
+  background-color: $rod2;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+  display: grid;
+  height: 65vh;
+  margin: 3rem;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr 0.1fr 1fr 0.1fr 1fr;
+  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  @media screen and (max-width: 989px) {
+    grid-template-columns: 1fr;
+    grid-gap: 0.2rem;
+    margin: 0 -1rem;
+    grid-gap: 1rem;
+    border-radius: 0;
+
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    height: 115vh;
+  }
+
+  .vl {
+    border-left: 1.02px solid black;
+    height: 90%;
+    margin: auto 0;
+    @media screen and (max-width: 989px) {
+      border-bottom: 1px solid black;
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+
+  .basic-skills,
+  .libraries-and-frameworks,
+  .misc {
+    display: grid;
+    // justify-content: center;
+    grid-template-rows: 1fr 1.8fr;
+
+    .heading {
+      text-transform: uppercase;
+      font-size: 3rem;
+    }
+
+    ul {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      li {
+        list-style: none;
+        // text-align: center;
+        color: #eee;
+        font-size: 2rem;
+        @media screen and (max-width: 989px) {
+          font-size: 1.9rem;
+        }
+      }
+    }
+  }
+}

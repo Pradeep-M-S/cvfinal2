@@ -14,48 +14,42 @@ body {
   font-size: 62.5%;
   padding: 0;
   margin: 0;
+  // background-color: $rod2;
   font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-.container {
-  width: 100%;
-  min-width: 100%;
-  margin: 0 auto;
-  .wrapper {
-    padding: 0 4.8rem;
-    .home {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      width: 100%;
-      p {
-        font-size: 3rem;
-        letter-spacing: 0.7rem;
-        text-transform: uppercase;
-        font-weight: 500;
-        @media screen and (max-width: 989px) {
-          font-size: 1.7rem;
-          letter-spacing: 0.3rem;
-        }
-      }
-      h5 {
-        margin-top: 15rem;
-        font-size: 2.4rem;
-        font-weight: 600;
-        padding-right: 36rem;
-        @media screen and (max-width: 989px) {
-          margin-top: 7rem;
-          font-size: 1.8rem;
-          padding-right: 8rem;
-        }
-      }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  b,
+  a,
+  button,
+  svg,
+  .right-arrow {
+    &::selection {
+      background-color: $black;
+      color: white;
+    }
+    &::-moz-selection {
+      background-color: $custom-red;
+      color: white;
     }
   }
 }
 
+.App {
+  display: flex;
+  flex-direction: column;
+}
+//header styling section
 header {
-  height: 10rem;
+  height: 8rem;
+  width: 100%;
+  position: fixed;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.08);
+  z-index: 10;
 
   .inner-header {
     position: relative;
@@ -66,9 +60,13 @@ header {
     align-items: center;
     .logo a {
       font-weight: 700;
-      font-size: 2.5rem;
+      font-size: 3.5rem;
       text-decoration: none;
       color: $black;
+
+      @media screen and(max-width:989px) {
+        font-size: 3rem;
+      }
     }
     .menu {
       button {
@@ -77,11 +75,17 @@ header {
         outline: none;
         cursor: pointer;
         font-size: 1.8rem;
-        font-weight: 500;
+        font-weight: 400;
         mix-blend-mode: difference;
+
+        @media screen and(max-width:989px) {
+          font-weight: 600;
+        }
       }
     }
   }
+
+  //hamburger menu stlying
   .hamburger-menu {
     display: none;
     z-index: 9;
@@ -95,6 +99,8 @@ header {
     @media screen and (max-width: 989px) {
       overflow-y: hidden;
     }
+
+    //black color that fades in with animation
     .menu-secondary-background-color {
       background: $black;
       top: 0;
@@ -111,34 +117,23 @@ header {
       background: $rod2;
       height: 100%;
       overflow: hidden;
-      .menu-city-background {
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        opacity: 0;
-        background-size: cover;
-        background-repeat: no-repeat;
-        animation-name: backgroundEffect;
-        animation-duration: 30s;
-        animation-iteration-count: infinite;
-        background-size: cover;
-        background-repeat: no-repeat;
-        animation: cameraPan 30s infinite;
-      }
+
       .wrapper {
-        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        align-items: center;
+        text-align: left;
+        justify-content: center;
         .menu-links {
-          display: flex;
-          justify-content: space-between;
+          display: grid;
+          grid-template-columns: 1fr;
+
+          justify-content: center;
           align-items: center;
           position: relative;
-          top: 20rem;
+          top: 8rem;
           @media screen and (max-width: 989px) {
-            top: 10rem;
           }
 
           nav {
@@ -148,7 +143,7 @@ header {
               padding: 0;
               li {
                 list-style: none;
-                font-size: 8rem;
+                font-size: 6rem;
                 font-weight: 700;
                 cursor: pointer;
                 height: 13.5rem;
@@ -159,6 +154,7 @@ header {
                 @media screen and (max-width: 989px) {
                   font-size: 4rem;
                   height: 7.5rem;
+                  width: 20rem;
                 }
                 a {
                   position: absolute;
@@ -170,48 +166,6 @@ header {
                   }
                 }
               }
-            }
-          }
-          .info {
-            color: #fff;
-            width: 30rem;
-
-            @media screen and (max-width: 989px) {
-              display: none;
-            }
-            h3 {
-              font-size: 2.8rem;
-              margin: 8px auto;
-            }
-            p {
-              margin: 0 auto;
-              font-size: 1.8rem;
-            }
-          }
-        }
-        .locations {
-          position: absolute;
-          bottom: -3rem;
-          color: #fff;
-          margin-top: 1.6rem;
-          font-size: 1.5rem;
-          font-weight: 600;
-          @media screen and (max-width: 989px) {
-            display: none;
-          }
-          span {
-            cursor: pointer;
-            &:first-child {
-              margin-left: 64px;
-            }
-            font-weight: 400;
-            margin: 0 32px;
-            transition: 0.3s ease-in-out;
-            &:hover {
-              color: #fff;
-              background: $black;
-              padding: 8px 24px;
-              border-radius: 4px;
             }
           }
         }

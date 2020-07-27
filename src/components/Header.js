@@ -10,15 +10,13 @@ const Header = ({ history }) => {
     menuName: "Menu",
   });
 
-  //state for disabled buton
-  const [disabled, setDisabled] = useState(false);
-
   //useEffect for page changes
   useEffect(() => {
     history.listen(() => {
       setState({ clicked: false, menuName: "Menu" });
     });
   });
+
   const handleMenu = () => {
     if (state.initial === false) {
       setState({
@@ -39,15 +37,6 @@ const Header = ({ history }) => {
     }
   };
 
-  //Determine if our menu button should be disabled
-
-  const disabledMenu = () => {
-    setDisabled(!disabled);
-    setTimeout(() => {
-      setDisabled(false);
-    }, 1200);
-  };
-
   return (
     <header>
       <div className="container">
@@ -57,9 +46,7 @@ const Header = ({ history }) => {
               <Link to="/">Pradeep.</Link>
             </div>
             <div className="menu">
-              <button disabled={disabled} onClick={handleMenu}>
-                MENU
-              </button>
+              <button onClick={handleMenu}>MENU</button>
             </div>
           </div>
         </div>

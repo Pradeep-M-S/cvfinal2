@@ -1,0 +1,8 @@
+.projects-wrapper {
+  text-align: center;
+  font-size: 4rem;
+
+  @media screen and(max-width:989px) {
+    font-size: 2rem;
+  }
+}
