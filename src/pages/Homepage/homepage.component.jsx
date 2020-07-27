@@ -12,6 +12,7 @@ import express from "../../images/express.png";
 import git from "../../images/git.png";
 import github from "../../images/github.png";
 import gsap from "../../images/gsap.png";
+import Footer from "../../components/Footer/Footer";
 
 function Home() {
   return (
@@ -73,6 +74,7 @@ function Home() {
           </div>
         </div>
       </div>
+      <Footer buttontitle="Contact" image={require("../../images/wolf.svg")} />{" "}
     </div>
   );
 }

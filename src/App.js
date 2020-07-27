@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./App.scss";
 import Header from "./components/Header";
-import Footer from "./components/Footer/Footer";
 
 import Projects from "./pages/Projects/Projects.component";
 import Blog from "./pages/Blog/Blog.component";
@@ -23,7 +22,6 @@ function App() {
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/skills" component={Skills} />
         </Switch>
-        <Footer buttontitle="Contact" image={require("./images/wolf.svg")} />{" "}
       </div>
     </Router>
   );
