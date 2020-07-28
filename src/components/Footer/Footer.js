@@ -142,12 +142,15 @@ const FooterWords = styled.div`
   text-align: center;
   h2 {
     font-size: 2.2rem;
+    font-weight: 400;
     @media screen and (max-width: 989px) {
       font-size: 1.2rem;
     }
   }
   h3 {
     font-size: 1.6rem;
+    font-weight: 400;
+
     @media screen and (max-width: 989px) {
       font-size: 1rem;
     }
