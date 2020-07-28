@@ -71,7 +71,7 @@
         }
 
         .btn-svg-wrapper {
-          width: 13%;
+          width: 18%;
           box-sizing: border-box;
           display: grid;
           grid-template-columns: 1fr 0.7fr;
@@ -144,6 +144,9 @@
       }
     }
   }
+  .bottom-svg {
+    margin-top: -3rem;
+  }
   .skills-svg {
     height: 60vh;
     background-color: #ff004d;
@@ -173,6 +176,7 @@
       }
       @media screen and (max-width: 989px) {
         font-size: 2rem;
+        // height: 80vh;
       }
     }
     @media screen and (max-width: 989px) {
@@ -185,10 +189,14 @@
       width: 70%;
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      grid-gap: 4rem;
+      grid-gap: 7rem;
 
       @media screen and (max-width: 989px) {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 0.5rem;
+        .nodejs {
+          display: none;
+        }
         .gsap {
           display: none;
         }

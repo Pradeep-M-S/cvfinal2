@@ -27,7 +27,7 @@ const FooterAboveCard = styled.div`
   grid-template-columns: 1fr 1fr 0.6fr;
 
   @media screen and (max-width: 989px) {
-    height: 28rem;
+    height: 20rem;
     grid-template-columns: 1fr;
     grid-template-rows: 0.5fr 0.5fr 0.6fr;
   }
@@ -87,7 +87,7 @@ const FooterAboveCard = styled.div`
 const FooterSection = styled.div`
   width: 100%;
 
-  max-height: 75vh;
+  height: 80vh;
   position: absolute;
   top: 12rem;
   background: linear-gradient(104deg, #7510f7 0%, #7510f7 100%);
@@ -96,6 +96,11 @@ const FooterSection = styled.div`
   grid-gap: 40px;
   grid-template-rows: repeat(3, 1fr);
   justify-items: center;
+  @media (max-width: 720px) {
+    height: 70vh;
+    grid-gap: 10px;
+    grid-template-rows: repeat(3, 1fr);
+  }
 `;
 
 const FooterImage = styled.img`
@@ -111,6 +116,7 @@ const FooterImage = styled.img`
   @media (max-width: 720px) {
     width: 60px;
     height: 100px;
+    margin-top: 5rem;
   }
 `;
 
@@ -135,6 +141,7 @@ const FooterLinks = styled.div`
 
   @media (max-width: 720px) {
     font-size: 1.5rem;
+    display: none;
   }
 `;
 

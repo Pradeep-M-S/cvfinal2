@@ -65,13 +65,22 @@ function Home() {
             <img src={css} alt="" title="CSS" />
             <img src={js} alt="" title="JavaScript" />
             <img src={sass} alt="" title="Sass" />
-            <img src={node} alt="" title="Node" />
+            <img src={node} className="nodejs" alt="" title="Node" />
             <img src={react} alt="" title="React" />
             <img src={express} alt="" title="Express" />
             <img src={git} alt="" title="Git" />
             <img src={github} className="gsap" alt="" title="Github" />
             <img src={gsap} alt="" title="Greensock" />
           </div>
+        </div>
+        <div className="bottom-svg">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path
+              fill="#ff004d"
+              fill-opacity="1"
+              d="M0,224L1440,128L1440,0L0,0Z"
+            ></path>
+          </svg>
         </div>
       </div>
       <Footer buttontitle="Contact" image={require("../../images/wolf.svg")} />{" "}
