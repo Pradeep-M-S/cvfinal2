@@ -42,10 +42,10 @@ const Header = ({ history }) => {
       <div className="container">
         <div className="wrapper">
           <div className="inner-header">
-            <div className="logo">
+            <div className={state.clicked ? "white logo" : " logo"}>
               <Link to="/">Pradeep.</Link>
             </div>
-            <div className="menu">
+            <div className={state.clicked ? " menu" : " menu"}>
               <button onClick={handleMenu}>MENU</button>
             </div>
           </div>

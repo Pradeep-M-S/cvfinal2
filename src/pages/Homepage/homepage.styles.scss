@@ -79,6 +79,7 @@
           align-items: center;
           @media screen and (max-width: 989px) {
             width: 36%;
+            grid-template-columns: 1fr;
           }
           &:after {
             display: block;
@@ -89,6 +90,15 @@
           }
           &:hover:after {
             transform: scaleX(1.1) scaleY(1);
+          }
+
+          @media screen and (max-width: 989px) {
+            &:after {
+              border: none;
+            }
+            &:hover:after {
+              border: none;
+            }
           }
           .contact-button {
             width: 7.5rem;
@@ -105,6 +115,17 @@
 
             @media screen and (max-width: 989px) {
               font-size: 2rem;
+
+              &:after {
+                display: block;
+                content: "";
+                border-bottom: solid 3.5px #151515;
+                transform: scaleX(2) scaleY(0);
+                transition: transform 250ms ease-in-out;
+              }
+              &:hover:after {
+                transform: scaleX(1.5) scaleY(1);
+              }
             }
           }
           img {
