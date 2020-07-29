@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { withRouter, Link } from "react-router-dom";
 import Hamburger from "./Hamburger";
+import ThemeToggler from "./Theme-Toggler/ThemeToggler";
 
 const Header = ({ history }) => {
   //State for menu button
@@ -42,10 +43,11 @@ const Header = ({ history }) => {
       <div className="container">
         <div className="wrapper">
           <div className="inner-header">
-            <div className={state.clicked ? "white logo" : " logo"}>
+            <div className="logo">
               <Link to="/">Pradeep.</Link>
             </div>
-            <div className={state.clicked ? " menu" : " menu"}>
+            <ThemeToggler />
+            <div className="menu">
               <button onClick={handleMenu}>MENU</button>
             </div>
           </div>

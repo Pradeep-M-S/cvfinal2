@@ -1,6 +1,8 @@
 import React from "react";
 import "./homepage.styles.scss";
 
+import { Icon } from "@chakra-ui/core";
+
 import RightArrow from "./right-arrow.svg";
 import html from "../../images/html.png";
 import css from "../../images/css.png";
@@ -37,12 +39,9 @@ function Home() {
                 >
                   Contact
                 </button>
-                <img
-                  href="mailto:pradeepmsblogspot@gmail.com"
-                  className="right-arrow"
-                  src={RightArrow}
-                  alt="React Logo"
-                />
+                <div className="ae">
+                  <Icon name="chevron-right" size="5em" />
+                </div>
               </div>
             </div>
           </div>

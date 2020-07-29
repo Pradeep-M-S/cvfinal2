@@ -1,5 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  ThemeProvider,
+  theme,
+  ColorModeProvider,
+  CSSReset,
+} from "@chakra-ui/core";
 
 import "./App.scss";
 import Header from "./components/Header";
@@ -12,18 +18,23 @@ import Skills from "./pages/Skills/skills.component";
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Header />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/projects" component={Projects} />
-          <Route exact path="/blog" component={Blog} />
-          <Route exact path="/contact" component={Contact} />
-          <Route exact path="/skills" component={Skills} />
-        </Switch>
-      </div>
-    </Router>
+    <ThemeProvider theme={theme}>
+      <ColorModeProvider>
+        <CSSReset />
+        <Router>
+          <div className="App">
+            <Header />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/projects" component={Projects} />
+              <Route exact path="/blog" component={Blog} />
+              <Route exact path="/contact" component={Contact} />
+              <Route exact path="/skills" component={Skills} />
+            </Switch>
+          </div>
+        </Router>
+      </ColorModeProvider>
+    </ThemeProvider>
   );
 }
 
