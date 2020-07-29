@@ -122,9 +122,9 @@ const FooterImage = styled.img`
 
 const FooterLinks = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px;
-  font-size: 25px;
+  font-size: 1.5rem;
 
   a {
     color: #eee;
@@ -148,14 +148,14 @@ const FooterLinks = styled.div`
 const FooterWords = styled.div`
   text-align: center;
   h2 {
-    font-size: 2.2rem;
-    font-weight: 400;
+    font-size: 2rem;
+    font-weight: 500;
     @media screen and (max-width: 989px) {
       font-size: 1.2rem;
     }
   }
   h3 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 400;
 
     @media screen and (max-width: 989px) {
