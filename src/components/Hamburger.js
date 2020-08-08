@@ -46,7 +46,7 @@ const Hamburger = ({ state }) => {
         height: "100%",
       });
       staggerReveal(reavealMenuBackground, revealMenu);
-      staggerText(line1, line2, line3, line4);
+      staggerText(line1, line2, line3);
     }
   }, [state]);
 
@@ -102,11 +102,6 @@ const Hamburger = ({ state }) => {
                       Contact Me
                     </Link>
                   </li>{" "}
-                  <li>
-                    <Link ref={(el) => (line4 = el)} to="/skills">
-                      Skills
-                    </Link>
-                  </li>
                 </ul>
               </nav>
             </div>
