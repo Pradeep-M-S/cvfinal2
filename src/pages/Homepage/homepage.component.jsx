@@ -2,8 +2,8 @@ import React from "react";
 import "./homepage.styles.scss";
 
 import { Icon } from "@chakra-ui/core";
+import Projects from "../../components/Projects/Projects";
 
-import RightArrow from "./right-arrow.svg";
 import html from "../../images/html.png";
 import css from "../../images/css.png";
 import js from "../../images/js.png";
@@ -82,7 +82,11 @@ function Home() {
           </svg>
         </div>
       </div>
-      <Footer buttontitle="Contact" image={require("../../images/wolf.svg")} />{" "}
+      <Projects />
+      <Footer
+        buttontitle="Contact"
+        image={require("../../images/wolf.svg")}
+      />{" "}
     </div>
   );
 }
