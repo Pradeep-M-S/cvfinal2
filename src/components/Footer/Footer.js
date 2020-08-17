@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 
 const FooterWrapper = styled.div`
-  height: 80vh;
+  height: 50vh;
   padding-top: 5rem;
-  width: 100%;
+  width: 100vw;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1.8fr;
@@ -19,7 +19,7 @@ const FooterAboveCard = styled.div`
   border: 0.2px solid black;
   border-radius: 20px;
   margin: 0 auto;
-  background-color: #141c3a;
+  background-color: #1b1f29;
   z-index: 5;
   display: grid;
   justify-content: center;
@@ -27,7 +27,8 @@ const FooterAboveCard = styled.div`
   grid-template-columns: 1fr 1fr 0.6fr;
 
   @media screen and (max-width: 989px) {
-    height: 20rem;
+    height: 35rem;
+    width: 70%;
     grid-template-columns: 1fr;
     grid-template-rows: 0.5fr 0.5fr 0.6fr;
   }
@@ -87,10 +88,10 @@ const FooterAboveCard = styled.div`
 const FooterSection = styled.div`
   width: 100%;
 
-  height: 80vh;
+  height: 50vh;
   position: absolute;
   top: 12rem;
-  background: linear-gradient(104deg, #7510f7 0%, #7510f7 100%);
+  background: #ff004d;
 
   display: grid;
   grid-gap: 40px;
@@ -103,31 +104,15 @@ const FooterSection = styled.div`
   }
 `;
 
-const FooterImage = styled.img`
-  width: 100px;
-  height: 130px;
-  padding: 10rem 0 0 0;
-  transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
-
-  &:hover {
-    transform: scale(1.1) rotate(-8deg);
-  }
-
-  @media (max-width: 720px) {
-    width: 60px;
-    height: 100px;
-    margin-top: 5rem;
-  }
-`;
-
 const FooterLinks = styled.div`
+  padding-top: 10rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 30px;
   font-size: 1.5rem;
 
   a {
-    color: #eee;
+    color: black;
     font-family: "Poppins";
     text-decoration: none;
     list-style-type: none;
@@ -167,13 +152,12 @@ const Footer = (props) => (
   <FooterWrapper>
     <FooterAboveCard>
       <h2>Have an idea ?</h2>
-      <p>" I could turn your ideas into actions : ) "</p>
+      <p> I could turn your ideas into actions </p>
       <div href="#" className="lets-talk-btn">
         <a href="#">Let's talk</a>
       </div>
     </FooterAboveCard>
     <FooterSection>
-      <FooterImage src={props.image}></FooterImage>
       <FooterLinks>
         <a href="">Instagram</a>
         <a href="">Linked-in</a>

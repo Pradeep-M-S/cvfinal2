@@ -11,6 +11,8 @@ $cyanframerbutton: #01cc6b;
 
 html,
 body {
+  width: 100vw;
+  overflow-x: hidden;
   font-size: 62.5%;
   padding: 0;
   margin: 0;
@@ -39,7 +41,7 @@ body {
 //header styling section
 header {
   height: 6rem;
-  width: 100%;
+  width: 100vw;
   position: fixed;
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.08);
   z-index: 10;
@@ -53,10 +55,14 @@ header {
     z-index: 10;
     height: 60px;
     display: grid;
+    width: 100vw;
     grid-template-columns: 75% 15% 10%;
     justify-content: center;
     align-items: center;
     // align-self: center;
+    @media screen and (max-width: 989px) {
+      width: 80vw;
+    }
     .logo a {
       font-weight: 700;
       font-size: 3.5rem;
