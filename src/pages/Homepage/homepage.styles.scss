@@ -1,6 +1,8 @@
 .home-flex-layout {
   display: grid;
   grid-template-columns: 1fr;
+  transition-duration: 0.4s;
+
   grid-gap: 10rem;
 }
 .container {

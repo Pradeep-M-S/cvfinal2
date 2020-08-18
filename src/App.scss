@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,600,800&display=swap");
-
 $red: #e20001;
 $black: #191919;
 $custom-red: #ff2f5f;
@@ -12,7 +11,7 @@ $cyanframerbutton: #01cc6b;
 html,
 body {
   width: 100vw;
-  overflow-x: hidden;
+
   font-size: 62.5%;
   padding: 0;
   margin: 0;
@@ -36,7 +35,6 @@ body {
 .App {
   display: flex;
   flex-direction: column;
-  transition-duration: 0.4s;
 }
 //header styling section
 header {
@@ -45,6 +43,7 @@ header {
   position: fixed;
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.08);
   z-index: 10;
+  transition-duration: 0.4s;
 
   @media screen and (max-width: 989px) {
     height: 6rem;
@@ -230,21 +229,3 @@ header {
     }
   }
 }
-
-// @keyframes cameraPan {
-//   0% {
-//     background-position: 0% 0%;
-//   }
-//   25% {
-//     background-position: 40% 10%;
-//   }
-//   50% {
-//     background-position: 0% 10%;
-//   }
-//   75% {
-//     background-position: 10% 40%;
-//   }
-//   100% {
-//     background-position: 0% 0%;
-//   }
-// }
