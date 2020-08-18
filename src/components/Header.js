@@ -44,7 +44,7 @@ const Header = ({ history }) => {
         <div className="wrapper">
           <div className="inner-header">
             <div className="logo">
-              <Link to="/">Pradeep.</Link>
+              <Link to="/">Pradeep</Link>
             </div>
             <ThemeToggler />
             <div className="menu">
